@@ -1,19 +1,26 @@
-def print_menu():
-    print("1. 연락처 입력")
-    print("2. 연락처 출력")
-    print("3. 연락처 삭제")
-    print("4. 종료")
-    menu = input("메뉴 선택: ")
-    return int(menu)
+class Parent:
+    house = "incheon"
+    def __init__(self):
+        self.money = 10000
+        print("init")
 
-def run():
-    while 1:
-        menu = print_menu()
-        if menu == 4:
-            break
+class Child1(Parent):
+    def __init__(self):
+        super().__init__()
+        pass
 
-if __name__ == "__main__":
-    run()
+class Child2(Parent):
+    def __init__(self):
+        pass
+
+child1 = Child1()
+child2 = Child2()
+
+#parent1 = Parent()
+
+print(child1.money)
+
+print(dir(child1))
 
 
 
